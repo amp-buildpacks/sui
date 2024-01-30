@@ -19,6 +19,7 @@ import (
 	"os"
 	"path/filepath"
 
+	"github.com/BurntSushi/toml"
 	"github.com/buildpacks/libcnb"
 )
 
@@ -27,6 +28,16 @@ const (
 )
 
 type Detect struct {
+}
+
+type Package struct {
+	Dependencies map[string]*Dependency
+}
+
+type Dependency struct {
+	Git    string
+	Rev    string
+	Subdir string
 }
 
 func (d Detect) Detect(context libcnb.DetectContext) (libcnb.DetectResult, error) {
@@ -55,10 +66,19 @@ func (d Detect) Detect(context libcnb.DetectContext) (libcnb.DetectResult, error
 }
 
 func (d Detect) suiProject(appDir string) (bool, error) {
-	filename := "Move.toml"
-	_, err := os.Stat(filepath.Join(appDir, filename))
+	projectName := filepath.Join(appDir, "Move.toml")
+	_, err := os.Stat(projectName)
 	if os.IsNotExist(err) || err != nil {
-		return false, fmt.Errorf("unable to determine if %s exists\n%w", filename, err)
+		return false, fmt.Errorf("unable to determine if %s exists\n%w", projectName, err)
+	}
+
+	var packageConfig Package
+	if _, err := toml.DecodeFile(projectName, &packageConfig); err != nil {
+		return false, fmt.Errorf("unable to parsing %s\n%w", projectName, err)
+	}
+
+	if _, ok := packageConfig.Dependencies["Sui"]; !ok {
+		return false, fmt.Errorf("unable to determine if Sui project")
 	}
 
 	buildDirectory := filepath.Join(appDir, ".")

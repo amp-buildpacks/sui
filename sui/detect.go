@@ -31,13 +31,13 @@ type Detect struct {
 }
 
 type Package struct {
-	Dependencies map[string]*Dependency
+	Dependencies map[string]*Dependency `toml:"dependencies"`
 }
 
 type Dependency struct {
-	Git    string
-	Rev    string
-	Subdir string
+	Git    string `toml:"git"`
+	Rev    string `toml:"rev"`
+	Subdir string `toml:"subdir"`
 }
 
 func (d Detect) Detect(context libcnb.DetectContext) (libcnb.DetectResult, error) {

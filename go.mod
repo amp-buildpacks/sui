@@ -1,6 +1,6 @@
 module github.com/amp-buildpacks/sui
 
-go 1.21
+go 1.20
 
 require (
 	github.com/BurntSushi/toml v1.3.2
@@ -19,5 +19,5 @@ require (
 	github.com/mitchellh/hashstructure/v2 v2.0.2 // indirect
 	github.com/onsi/gomega v1.31.1 // indirect
 	github.com/xi2/xz v0.0.0-20171230120015-48954b6210f8 // indirect
-	golang.org/x/sys v0.17.0 // indirect
+	golang.org/x/sys v0.18.0 // indirect
 )

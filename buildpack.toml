@@ -69,32 +69,31 @@ api = "0.8"
   [[metadata.dependencies]]
     id = "sui-devnet"
     name = "Sui DevNet"
-    purl = "pkg:generic/sui@v1.17.0"
-    sha256 = "c36c0adf65a73a64d88f215d61506af3ad36d28a658a2b2dd5d217d9bfb5b0e5"
-    uri = "https://github.com/MystenLabs/sui/releases/download/devnet-v1.17.0/sui-devnet-v1.17.0-ubuntu-x86_64.tgz"
+    purl = "pkg:generic/sui@v1.30.0"
+    sha256 = "34ce05e202118fee87e553ba4dd55741800834b31b12d604082c4d35572557c7"
+    uri = "https://github.com/MystenLabs/sui/releases/download/devnet-v1.30.0/sui-devnet-v1.30.0-ubuntu-x86_64.tgz"
     stacks = ["*"]
-    version = "1.17.0"
+    version = "1.30.0"
     licenses = [ "Apache-2.0" ]
 
   [[metadata.dependencies]]
     id = "sui-testnet"
     name = "Sui TestNet"
-    purl = "pkg:generic/sui@v1.17.0"
-    sha256 = "c7f72415273b06a165c7c4612c6942da19a2d9894cf611bc553591765164113d"
-    uri = "https://github.com/MystenLabs/sui/releases/download/testnet-v1.17.0/sui-testnet-v1.17.0-ubuntu-x86_64.tgz"
+    purl = "pkg:generic/sui@v1.30.1"
+    sha256 = "08dd79e264a9cf46caf117d72fae7d7cf5a636104d6abcf48c278c879ed268a2"
+    uri = "https://github.com/MystenLabs/sui/releases/download/testnet-v1.30.1/sui-testnet-v1.30.1-ubuntu-x86_64.tgz"
     stacks = ["*"]
-    version = "1.17.0"
+    version = "1.30.1"
     licenses = [ "Apache-2.0" ]
 
   [[metadata.dependencies]]
     id = "sui-mainnet"
     name = "Sui MainNet"
-    purl = "pkg:generic/sui@v1.62.2"
-    sha256 = "cc525fe55408a71b42a1777cd0ce6c8e58d4f1be159f2e7290d1d98e71a1e1a2"
-    # uri = "https://github.com/MystenLabs/sui/releases/download/mainnet-v1.16.2/sui-mainnet-v1.16.2-ubuntu-x86_64.tgz"
-    uri = "https://sui-releases.s3-accelerate.amazonaws.com/releases/sui-mainnet-v1.16.2-ubuntu-x86_64.tgz"
+    purl = "pkg:generic/sui@v1.29.2"
+    sha256 = "ced7d1b42f56ab9124e3073da6d903f95a2b7fa489d5276f75e2e2fb0b4bd7ec"
+    uri = "https://github.com/MystenLabs/sui/releases/download/mainnet-v1.29.2/sui-mainnet-v1.29.2-ubuntu-x86_64.tgz"
     stacks = ["*"]
-    version = "1.62.2"
+    version = "1.29.2"
     licenses = [ "Apache-2.0" ]
 
 

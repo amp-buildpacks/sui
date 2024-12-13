@@ -5,7 +5,7 @@ go 1.23
 require (
 	github.com/BurntSushi/toml v1.4.0
 	github.com/buildpacks/libcnb v1.30.4
-	github.com/paketo-buildpacks/libpak v1.72.0
+	github.com/paketo-buildpacks/libpak v1.72.1
 )
 
 require (

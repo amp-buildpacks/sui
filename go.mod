@@ -5,7 +5,7 @@ go 1.24.0
 toolchain go1.24.11
 
 require (
-	github.com/BurntSushi/toml v1.5.0
+	github.com/BurntSushi/toml v1.6.0
 	github.com/buildpacks/libcnb v1.30.4
 	github.com/paketo-buildpacks/libpak v1.73.0
 )
